@@ -6,10 +6,10 @@ interface ButtonProps {
     size?: "lg"| "md" | "sm",
     text: string,
     startIcon?: ReactElement,
-    EndIcon?: ReactElement 
+    endIcon?: ReactElement 
 }
 
-const defaultStyles = "rounded-md p-4";
+const defaultStyles = "flex rounded-md p-4";
 const sizeStyles = {
     "sm": "py-1 px-2",
     "md": "py-2 px-4",
@@ -24,7 +24,7 @@ const variantStyles = {
 
 export const Button = (props: ButtonProps) => {
     
-    return<button className={`${variantStyles[props.variant]} ${defaultStyles} ${sizeStyles}`}>{props.text}</button>
+    return<button className={`${variantStyles[props.variant]} ${defaultStyles} ${sizeStyles}`}>{props.startIcon ? <div className="pr-2.5">{props.startIcon}</div>:null}{props.text}{props.endIcon}</button>
 }
 
 <Button variant = "primary" size="md" onClick={()=>{}} text={"fgf"}></Button>
