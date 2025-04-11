@@ -1,5 +1,5 @@
 import { ReactElement } from "react"
-import { IconProps } from "./interface"
+import { IconProps, iconSizeVariants} from "./interface"
 
 export const PlusIcon = (props: IconProps): ReactElement => {
     return(
@@ -8,7 +8,7 @@ export const PlusIcon = (props: IconProps): ReactElement => {
     viewBox="0 0 24 24" 
     stroke-width="1.5" 
     stroke="currentColor" 
-    className="{iconSizeVariants[props.size]}">
+    className={iconSizeVariants[props.size]}>
   <path 
     stroke-linecap="round" 
     stroke-linejoin="round" 
